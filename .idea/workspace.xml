@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ae8d6eb8-eebe-4c3c-befc-6e0e1f88bdac" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../h2/build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/document/use-case.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/document/제목 없는 다이어그램.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arh-main/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arh-main/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arh-main/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arh-main/wait-for-it.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/src/main/java/wave/cfd/CfdApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/src/main/resources/spy.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cfd/src/test/java/wave/cfd/CfdApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/ShopApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/config/PrincipalDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/config/PrincipalDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/config/auth/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/config/auth/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/cart/domain/Cart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/cart/domain/CartItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/cart/repository/CartItemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/cart/repository/CartRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/item/application/ItemService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/item/controller/ItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/item/domain/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/item/dto/ItemRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/item/dto/ItemUpdateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/item/repository/ItemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/user/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/user/dto/SignupDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/java/wave/shop/domain/user/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/src/test/java/wave/shop/ShopApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="project-board" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2MLMoH3XWmiyhfXCL0k2j61A8Bx" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;프로젝트&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;21a0b134ab803e0fda52b04658bb3d83&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ProjectBoardApplication (1)">
+    <configuration name="ProjectBoardApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="wave.project-board.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="wave.projectboard.ProjectBoardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectBoardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="project-board.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="wave.projectboard.ProjectBoardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="ae8d6eb8-eebe-4c3c-befc-6e0e1f88bdac" name="변경" comment="" />
+      <created>1677542583793</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677542583793</updated>
+      <workItem from="1677542584828" duration="997000" />
+      <workItem from="1677545974549" duration="249000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
