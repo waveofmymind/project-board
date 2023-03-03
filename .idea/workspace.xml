@@ -22,9 +22,9 @@
       <change beforePath="$PROJECT_DIR$/../cfd/src/main/resources/application.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../cfd/src/main/resources/spy.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../cfd/src/test/java/wave/cfd/CfdApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wave/projectboard/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wave/projectboard/controller/ArticleControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wave/projectboard/controller/ArticleControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shop/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../shop/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../shop/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
@@ -117,6 +117,7 @@
       <list>
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -145,6 +146,7 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -177,7 +179,7 @@
       <recent name="wave.projectboard.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArticleControllerTest">
+  <component name="RunManager" selected="Spring Boot.ProjectBoardApplication">
     <configuration name="DataRestTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -192,29 +194,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;wave.projectboard.controller.DataRestTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="DataRestTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;wave.projectboard.controller.DataRestTest.test&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -281,6 +260,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ArticleControllerTest.givenNothing_whenRequestingArticleView_thenReturnArticlesView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-board.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wave.projectboard.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="wave.projectboard.controller" />
+      <option name="MAIN_CLASS_NAME" value="wave.projectboard.controller.ArticleControllerTest" />
+      <option name="METHOD_NAME" value="givenNothing_whenRequestingArticleView_thenReturnArticlesView" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProjectBoardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="project-board.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="wave.projectboard.ProjectBoardApplication" />
@@ -290,11 +285,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ArticleControllerTest" />
+        <item itemvalue="JUnit.ArticleControllerTest.givenNothing_whenRequestingArticleView_thenReturnArticlesView" />
         <item itemvalue="Gradle.project-board [build]" />
         <item itemvalue="Gradle.project-board [clean]" />
+        <item itemvalue="JUnit.ArticleControllerTest" />
         <item itemvalue="Gradle.DataRestTest" />
-        <item itemvalue="Gradle.DataRestTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -316,6 +311,8 @@
       <workItem from="1677663556862" duration="7852000" />
       <workItem from="1677686529087" duration="505000" />
       <workItem from="1677713727416" duration="134000" />
+      <workItem from="1677713864878" duration="1477000" />
+      <workItem from="1677851111645" duration="299000" />
     </task>
     <servers />
   </component>
