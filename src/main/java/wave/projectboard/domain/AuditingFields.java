@@ -13,26 +13,28 @@ import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
-@EntityListeners(AuditingEntityListener.class)
-@MappedSuperclass
 @Getter
 @ToString
-public class AuditingFields {
+@EntityListeners(AuditingEntityListener.class)
+@MappedSuperclass
+public abstract class AuditingFields {
+
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @CreatedDate
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt; //생성일시
-    @CreatedBy
-    @Column(nullable = false,length = 100)
-    private String createdBy; //생성자
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
+    protected LocalDateTime createdAt; // 생성일시
 
+    @CreatedBy
+    @Column(nullable = false, updatable = false, length = 100)
+    protected String createdBy; // 생성자
+
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @LastModifiedDate
     @Column(nullable = false)
-    private LocalDateTime modifiedAt; //수정일시
+    protected LocalDateTime modifiedAt; // 수정일시
+
     @LastModifiedBy
     @Column(nullable = false, length = 100)
-    private String modifiedBy; //수정자
-
+    protected String modifiedBy; // 수정자
 
 }
