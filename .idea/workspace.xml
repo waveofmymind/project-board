@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ae8d6eb8-eebe-4c3c-befc-6e0e1f88bdac" name="변경" comment="">
       <change afterPath="$PROJECT_DIR$/../h2/build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/domain/type/SearchType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/dto/ArticleCommentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/dto/ArticleDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/dto/ArticleUpdateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/service/ArticleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/wave/projectboard/controller/MainControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/wave/projectboard/service/ArticleCommentServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/wave/projectboard/service/ArticleServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../arh-main/Dockerfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../arh-main/docker-compose.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../arh-main/src/main/resources/application.yml" beforeDir="false" />
@@ -22,7 +31,6 @@
       <change beforePath="$PROJECT_DIR$/../cfd/src/main/resources/application.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../cfd/src/main/resources/spy.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../cfd/src/test/java/wave/cfd/CfdApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
@@ -32,11 +40,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated/wave/projectboard/domain/QArticle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated/wave/projectboard/domain/QArticleComment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated/wave/projectboard/domain/QAuditingFields.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/wave/projectboard/ProjectBoardApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wave/projectboard/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/domain/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wave/projectboard/domain/ArticleComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/domain/ArticleComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wave/projectboard/domain/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/domain/UserAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wave/projectboard/repository/ArticleCommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/repository/ArticleCommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wave/projectboard/repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/repository/ArticleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shop/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../shop/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../shop/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
@@ -104,18 +117,13 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="project-board" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="project-board" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="verification" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="project-board" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="project-board" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -127,10 +135,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -177,7 +188,7 @@
     "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "spring.configuration.checksum": "21a0b134ab803e0fda52b04658bb3d83",
     "vue.rearranger.settings.migration": "true"
   }
@@ -191,10 +202,14 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="wave.projectboard.service" />
       <recent name="wave.projectboard.controller" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="wave.projectboard.dto" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProjectBoardApplication">
+  <component name="RunManager" selected="JUnit.ArticleServiceTest">
     <configuration name="project-board [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -237,48 +252,48 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ArticleControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArticleServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-board.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="wave.projectboard.controller.*" />
+          <option name="PATTERN" value="wave.projectboard.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="wave.projectboard.controller" />
-      <option name="MAIN_CLASS_NAME" value="wave.projectboard.controller.ArticleControllerTest" />
+      <option name="PACKAGE_NAME" value="wave.projectboard.service" />
+      <option name="MAIN_CLASS_NAME" value="wave.projectboard.service.ArticleServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArticleControllerTest.givenNothing_whenRequestingArticleView_thenReturnArticlesView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArticleServiceTest.게시글수정" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-board.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="wave.projectboard.controller.*" />
+          <option name="PATTERN" value="wave.projectboard.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="wave.projectboard.controller" />
-      <option name="MAIN_CLASS_NAME" value="wave.projectboard.controller.ArticleControllerTest" />
-      <option name="METHOD_NAME" value="givenNothing_whenRequestingArticleView_thenReturnArticlesView" />
+      <option name="PACKAGE_NAME" value="wave.projectboard.service" />
+      <option name="MAIN_CLASS_NAME" value="wave.projectboard.service.ArticleServiceTest" />
+      <option name="METHOD_NAME" value="게시글수정" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthControllerTest.givenNothing_whenTryingToLogin_thenReturnLoginView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArticleServiceTest.게시글정보입력시_게시글생성" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-board.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="wave.projectboard.controller.*" />
+          <option name="PATTERN" value="wave.projectboard.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="wave.projectboard.controller" />
-      <option name="MAIN_CLASS_NAME" value="wave.projectboard.controller.AuthControllerTest" />
-      <option name="METHOD_NAME" value="givenNothing_whenTryingToLogin_thenReturnLoginView" />
+      <option name="PACKAGE_NAME" value="wave.projectboard.service" />
+      <option name="MAIN_CLASS_NAME" value="wave.projectboard.service.ArticleServiceTest" />
+      <option name="METHOD_NAME" value="게시글정보입력시_게시글생성" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -293,11 +308,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AuthControllerTest.givenNothing_whenTryingToLogin_thenReturnLoginView" />
+        <item itemvalue="JUnit.ArticleServiceTest" />
         <item itemvalue="Gradle.project-board [build]" />
         <item itemvalue="Gradle.project-board [clean]" />
-        <item itemvalue="JUnit.ArticleControllerTest" />
-        <item itemvalue="JUnit.ArticleControllerTest.givenNothing_whenRequestingArticleView_thenReturnArticlesView" />
+        <item itemvalue="JUnit.ArticleServiceTest.게시글수정" />
+        <item itemvalue="JUnit.ArticleServiceTest.게시글정보입력시_게시글생성" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +340,9 @@
       <workItem from="1677852955152" duration="1832000" />
       <workItem from="1677854935307" duration="242000" />
       <workItem from="1677889507254" duration="4837000" />
-      <workItem from="1677918950019" duration="3280000" />
+      <workItem from="1677918950019" duration="9958000" />
+      <workItem from="1677933038654" duration="4563000" />
+      <workItem from="1677942883270" duration="1495000" />
     </task>
     <servers />
   </component>

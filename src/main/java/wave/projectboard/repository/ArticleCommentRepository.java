@@ -8,22 +8,25 @@ import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer;
 import org.springframework.data.querydsl.binding.QuerydslBindings;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import wave.projectboard.domain.ArticleComment;
-import wave.projectboard.domain.QArticle;
 import wave.projectboard.domain.QArticleComment;
 
-@RepositoryRestResource
+import java.util.List;
 
+@RepositoryRestResource
 public interface ArticleCommentRepository extends
-        JpaRepository<ArticleComment,Long>
-        ,QuerydslPredicateExecutor<ArticleComment>,
-        QuerydslBinderCustomizer<QArticleComment>
-{
+        JpaRepository<ArticleComment, Long>,
+        QuerydslPredicateExecutor<ArticleComment>,
+        QuerydslBinderCustomizer<QArticleComment> {
+
+    List<ArticleComment> findByArticle_Id(Long articleId);
+
     @Override
     default void customize(QuerydslBindings bindings, QArticleComment root) {
         bindings.excludeUnlistedProperties(true);
-        bindings.including(root.content,root.createdAt,root.createdBy);
+        bindings.including(root.content, root.createdAt, root.createdBy);
         bindings.bind(root.content).first(StringExpression::containsIgnoreCase);
         bindings.bind(root.createdAt).first(DateTimeExpression::eq);
         bindings.bind(root.createdBy).first(StringExpression::containsIgnoreCase);
     }
+
 }
