@@ -22,11 +22,6 @@
       <change beforePath="$PROJECT_DIR$/../cfd/src/main/resources/application.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../cfd/src/main/resources/spy.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../cfd/src/test/java/wave/cfd/CfdApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wave/projectboard/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wave/projectboard/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/index.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/index.th.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/wave/projectboard/controller/ArticleControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wave/projectboard/controller/ArticleControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shop/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../shop/build.gradle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../shop/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
@@ -320,7 +315,7 @@
       <workItem from="1677933038654" duration="4563000" />
       <workItem from="1677942883270" duration="3345000" />
       <workItem from="1677973017185" duration="146000" />
-      <workItem from="1677973171600" duration="321000" />
+      <workItem from="1677973171600" duration="1118000" />
     </task>
     <servers />
   </component>
