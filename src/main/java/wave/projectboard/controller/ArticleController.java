@@ -18,26 +18,28 @@ import wave.projectboard.service.ArticleService;
 import wave.projectboard.service.PaginationService;
 
 import java.util.List;
+
 @RequiredArgsConstructor
-@Controller
 @RequestMapping("/articles")
+@Controller
 public class ArticleController {
 
     private final ArticleService articleService;
     private final PaginationService paginationService;
 
     @GetMapping
-    public String articles(ModelMap map,
-                          @PageableDefault(size=10,sort="createdAt",direction = Sort.Direction.DESC) Pageable pageable,
-                           @RequestParam(required = false)SearchType searchType,
-                           @RequestParam(required = false) String searchValue) {
-        Page<ArticleResponse> articles = articleService.searchArticles(searchType,searchValue,pageable).map(ArticleResponse::from);
-        List<Integer> barNumbers= paginationService.getPaginationBarNumbers(pageable.getPageNumber(),articles.getTotalPages());
+    public String articles(
+            @RequestParam(required = false) SearchType searchType,
+            @RequestParam(required = false) String searchValue,
+            @PageableDefault(size = 10, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable,
+            ModelMap map
+    ) {
+        Page<ArticleResponse> articles = articleService.searchArticles(searchType, searchValue, pageable).map(ArticleResponse::from);
+        List<Integer> barNumbers = paginationService.getPaginationBarNumbers(pageable.getPageNumber(), articles.getTotalPages());
 
-
-
-        map.addAttribute("articles",articles );
-        map.addAttribute("paginationBarNumbers",barNumbers);
+        map.addAttribute("articles", articles);
+        map.addAttribute("paginationBarNumbers", barNumbers);
+        map.addAttribute("searchTypes", SearchType.values());
 
         return "articles/index";
     }
@@ -45,10 +47,30 @@ public class ArticleController {
     @GetMapping("/{articleId}")
     public String article(@PathVariable Long articleId, ModelMap map) {
         ArticleWithCommentsResponse article = ArticleWithCommentsResponse.from(articleService.getArticle(articleId));
+
         map.addAttribute("article", article);
         map.addAttribute("articleComments", article.articleCommentsResponse());
+        map.addAttribute("totalCount", articleService.getArticleCount());
 
         return "articles/detail";
+    }
+
+    @GetMapping("/search-hashtag")
+    public String searchHashtag(
+            @RequestParam(required = false) String searchValue,
+            @PageableDefault(size = 10, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable,
+            ModelMap map
+    ) {
+        Page<ArticleResponse> articles = articleService.searchArticlesViaHashtag(searchValue, pageable).map(ArticleResponse::from);
+        List<Integer> barNumbers = paginationService.getPaginationBarNumbers(pageable.getPageNumber(), articles.getTotalPages());
+        List<String> hashtags = articleService.getHashtags();
+
+        map.addAttribute("articles", articles);
+        map.addAttribute("hashtags", hashtags);
+        map.addAttribute("paginationBarNumbers", barNumbers);
+        map.addAttribute("searchType", SearchType.HASHTAG);
+
+        return "articles/search-hashtag";
     }
 
 }

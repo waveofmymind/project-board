@@ -13,9 +13,11 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import wave.projectboard.domain.Article;
 import wave.projectboard.domain.ArticleComment;
 import wave.projectboard.domain.QArticle;
+import wave.projectboard.repository.querydsl.ArticleRepositoryCustom;
 
 @RepositoryRestResource
 public interface ArticleRepository extends
+        ArticleRepositoryCustom,
         JpaRepository<Article, Long>,
         QuerydslPredicateExecutor<Article>,
         QuerydslBinderCustomizer<QArticle> {
