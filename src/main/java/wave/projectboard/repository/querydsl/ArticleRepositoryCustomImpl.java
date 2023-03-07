@@ -1,13 +1,12 @@
 package wave.projectboard.repository.querydsl;
 
-import com.querydsl.jpa.JPQLQuery;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 import wave.projectboard.domain.Article;
 import wave.projectboard.domain.QArticle;
 
 import java.util.List;
 
-public class ArticleRepositoryCustomImpl extends QuerydslRepositorySupport implements ArticleRepositoryCustom{
+public class ArticleRepositoryCustomImpl extends QuerydslRepositorySupport implements ArticleRepositoryCustom {
 
     public ArticleRepositoryCustomImpl() {
         super(Article.class);
@@ -23,4 +22,5 @@ public class ArticleRepositoryCustomImpl extends QuerydslRepositorySupport imple
                 .where(article.hashtag.isNotNull())
                 .fetch();
     }
+
 }
