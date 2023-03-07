@@ -4,10 +4,10 @@
 
 ## 개발 환경
 
-* Intellij IDEA Ultimate 2022.1.1 ~ 2022.1.3
+* IntelliJ IDEA 2023.2
 * Java 17
-* Gradle 7.4.1
-* Spring Boot 2.7.0
+* Gradle 
+* Spring Boot 2.7.9
 
 ## 기술 세부 스택
 
