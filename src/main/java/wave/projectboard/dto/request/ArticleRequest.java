@@ -16,7 +16,7 @@ public record ArticleRequest(
     }
 
     public ArticleDto toDto(UserAccountDto userAccountDto) {
-        return toDto(userAccountDto,null);
+        return toDto(userAccountDto, null);
     }
 
     public ArticleDto toDto(UserAccountDto userAccountDto, Set<HashtagDto> hashtagDtos) {

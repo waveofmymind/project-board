@@ -17,7 +17,6 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.security.test.context.support.WithUserDetails;
 import org.springframework.test.web.servlet.MockMvc;
 import wave.projectboard.config.TestSecurityConfig;
-import wave.projectboard.controller.ArticleController;
 import wave.projectboard.domain.constant.FormStatus;
 import wave.projectboard.domain.constant.SearchType;
 import wave.projectboard.dto.ArticleDto;
@@ -94,10 +93,10 @@ class ArticleControllerTest {
 
         // When & Then
         mvc.perform(
-                        get("/articles")
-                                .queryParam("searchType", searchType.name())
-                                .queryParam("searchValue", searchValue)
-                )
+                get("/articles")
+                        .queryParam("searchType", searchType.name())
+                        .queryParam("searchValue", searchValue)
+        )
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/index"))
@@ -122,11 +121,11 @@ class ArticleControllerTest {
 
         // When & Then
         mvc.perform(
-                        get("/articles")
-                                .queryParam("page", String.valueOf(pageNumber))
-                                .queryParam("size", String.valueOf(pageSize))
-                                .queryParam("sort", sortName + "," + direction)
-                )
+                get("/articles")
+                        .queryParam("page", String.valueOf(pageNumber))
+                        .queryParam("size", String.valueOf(pageSize))
+                        .queryParam("sort", sortName + "," + direction)
+        )
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/index"))
@@ -221,9 +220,9 @@ class ArticleControllerTest {
 
         // When & Then
         mvc.perform(
-                        get("/articles/search-hashtag")
-                                .queryParam("searchValue", hashtag)
-                )
+                get("/articles/search-hashtag")
+                        .queryParam("searchValue", hashtag)
+        )
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/search-hashtag"))
@@ -260,11 +259,11 @@ class ArticleControllerTest {
 
         // When & Then
         mvc.perform(
-                        post("/articles/form")
-                                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                                .content(formDataEncoder.encode(articleRequest))
-                                .with(csrf())
-                )
+                post("/articles/form")
+                        .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                        .content(formDataEncoder.encode(articleRequest))
+                        .with(csrf())
+        )
                 .andExpect(status().is3xxRedirection())
                 .andExpect(view().name("redirect:/articles"))
                 .andExpect(redirectedUrl("/articles"));
@@ -314,11 +313,11 @@ class ArticleControllerTest {
 
         // When & Then
         mvc.perform(
-                        post("/articles/" + articleId + "/form")
-                                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                                .content(formDataEncoder.encode(articleRequest))
-                                .with(csrf())
-                )
+                post("/articles/" + articleId + "/form")
+                        .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                        .content(formDataEncoder.encode(articleRequest))
+                        .with(csrf())
+        )
                 .andExpect(status().is3xxRedirection())
                 .andExpect(view().name("redirect:/articles/" + articleId))
                 .andExpect(redirectedUrl("/articles/" + articleId));
@@ -336,10 +335,10 @@ class ArticleControllerTest {
 
         // When & Then
         mvc.perform(
-                        post("/articles/" + articleId + "/delete")
-                                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                                .with(csrf())
-                )
+                post("/articles/" + articleId + "/delete")
+                        .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                        .with(csrf())
+        )
                 .andExpect(status().is3xxRedirection())
                 .andExpect(view().name("redirect:/articles"))
                 .andExpect(redirectedUrl("/articles"));

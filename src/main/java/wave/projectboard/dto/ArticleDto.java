@@ -1,14 +1,11 @@
 package wave.projectboard.dto;
 
 import wave.projectboard.domain.Article;
-import wave.projectboard.domain.Hashtag;
 import wave.projectboard.domain.UserAccount;
 
 import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import static wave.projectboard.domain.QHashtag.hashtag;
 
 public record ArticleDto(
         Long id,
@@ -38,7 +35,8 @@ public record ArticleDto(
                 entity.getContent(),
                 entity.getHashtags().stream()
                         .map(HashtagDto::from)
-                        .collect(Collectors.toUnmodifiableSet()),
+                        .collect(Collectors.toUnmodifiableSet())
+                ,
                 entity.getCreatedAt(),
                 entity.getCreatedBy(),
                 entity.getModifiedAt(),

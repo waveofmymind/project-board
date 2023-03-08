@@ -21,11 +21,8 @@ public interface ArticleRepository extends
         QuerydslBinderCustomizer<QArticle> {
 
     Page<Article> findByTitleContaining(String title, Pageable pageable);
-
     Page<Article> findByContentContaining(String content, Pageable pageable);
-
     Page<Article> findByUserAccount_UserIdContaining(String userId, Pageable pageable);
-
     Page<Article> findByUserAccount_NicknameContaining(String nickname, Pageable pageable);
 
     void deleteByIdAndUserAccount_UserId(Long articleId, String userid);
@@ -40,4 +37,5 @@ public interface ArticleRepository extends
         bindings.bind(root.createdAt).first(DateTimeExpression::eq);
         bindings.bind(root.createdBy).first(StringExpression::containsIgnoreCase);
     }
+
 }

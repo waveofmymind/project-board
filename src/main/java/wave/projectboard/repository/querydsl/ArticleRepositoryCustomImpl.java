@@ -1,5 +1,6 @@
 package wave.projectboard.repository.querydsl;
 
+
 import com.querydsl.jpa.JPQLQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -8,7 +9,6 @@ import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport
 import wave.projectboard.domain.Article;
 import wave.projectboard.domain.QArticle;
 import wave.projectboard.domain.QHashtag;
-import wave.projectboard.repository.querydsl.ArticleRepositoryCustom;
 
 import java.util.Collection;
 import java.util.List;

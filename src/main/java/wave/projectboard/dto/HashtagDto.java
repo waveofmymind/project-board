@@ -14,11 +14,11 @@ public record HashtagDto(
 ) {
 
     public static HashtagDto of(String hashtagName) {
-        return new HashtagDto(null,hashtagName,null,null,null,null);
+        return new HashtagDto(null, hashtagName, null, null, null, null);
     }
 
     public static HashtagDto of(Long id, String hashtagName, LocalDateTime createdAt, String createdBy, LocalDateTime modifiedAt, String modifiedBy) {
-       return new HashtagDto(id,hashtagName,createdAt,createdBy,modifiedAt,modifiedBy);
+        return new HashtagDto(id, hashtagName, createdAt, createdBy, modifiedAt, modifiedBy);
     }
 
     public static HashtagDto from(Hashtag entity) {
@@ -32,5 +32,8 @@ public record HashtagDto(
         );
     }
 
-    public Hashtag toEntity() {return Hashtag.of(hashtagName);}
+    public Hashtag toEntity() {
+        return Hashtag.of(hashtagName);
+    }
+
 }

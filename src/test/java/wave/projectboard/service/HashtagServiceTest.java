@@ -11,7 +11,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import wave.projectboard.domain.Hashtag;
 import wave.projectboard.repository.HashtagRepository;
-import wave.projectboard.service.HashtagService;
 
 import java.util.List;
 import java.util.Set;

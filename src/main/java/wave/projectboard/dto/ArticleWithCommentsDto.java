@@ -1,7 +1,6 @@
 package wave.projectboard.dto;
 
 import wave.projectboard.domain.Article;
-import wave.projectboard.domain.Hashtag;
 
 import java.time.LocalDateTime;
 import java.util.LinkedHashSet;
@@ -14,7 +13,7 @@ public record ArticleWithCommentsDto(
         Set<ArticleCommentDto> articleCommentDtos,
         String title,
         String content,
-        Set<HashtagDto>  hashtags,
+        Set<HashtagDto> hashtagDtos,
         LocalDateTime createdAt,
         String createdBy,
         LocalDateTime modifiedAt,
@@ -30,12 +29,14 @@ public record ArticleWithCommentsDto(
                 UserAccountDto.from(entity.getUserAccount()),
                 entity.getArticleComments().stream()
                         .map(ArticleCommentDto::from)
-                        .collect(Collectors.toCollection(LinkedHashSet::new)),
+                        .collect(Collectors.toCollection(LinkedHashSet::new))
+                ,
                 entity.getTitle(),
                 entity.getContent(),
                 entity.getHashtags().stream()
                         .map(HashtagDto::from)
-                        .collect(Collectors.toUnmodifiableSet()),
+                        .collect(Collectors.toUnmodifiableSet())
+                ,
                 entity.getCreatedAt(),
                 entity.getCreatedBy(),
                 entity.getModifiedAt(),
