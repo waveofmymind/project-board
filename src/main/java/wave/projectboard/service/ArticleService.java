@@ -96,5 +96,9 @@ public class ArticleService {
         return articleRepository.findByHashtagNames(null, pageable).map(ArticleDto::from);
     }
 
+    public List<String> getHashtags() {
+        return articleRepository.findAllDistinctHashtags();
+    }
+
 
 }
