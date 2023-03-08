@@ -8,16 +8,19 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import wave.projectboard.domain.Article;
 import wave.projectboard.domain.ArticleComment;
+import wave.projectboard.domain.Hashtag;
 import wave.projectboard.domain.UserAccount;
 import wave.projectboard.dto.ArticleCommentDto;
 import wave.projectboard.dto.UserAccountDto;
 import wave.projectboard.repository.ArticleCommentRepository;
 import wave.projectboard.repository.ArticleRepository;
 import wave.projectboard.repository.UserAccountRepository;
+import wave.projectboard.service.ArticleCommentService;
 
 import javax.persistence.EntityNotFoundException;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -164,7 +167,7 @@ class ArticleCommentServiceTest {
 
     private ArticleComment createArticleComment(String content) {
         return ArticleComment.of(
-                Article.of(createUserAccount(), "title", "content", "hashtag"),
+                createArticle(),
                 createUserAccount(),
                 content
         );
@@ -181,12 +184,18 @@ class ArticleCommentServiceTest {
     }
 
     private Article createArticle() {
-        return Article.of(
+        Article article = Article.of(
                 createUserAccount(),
                 "title",
-                "content",
-                "#java"
+                "content"
         );
+        article.addHashtags(Set.of(createHashtag(article)));
+
+        return article;
+    }
+
+    private Hashtag createHashtag(Article article) {
+        return Hashtag.of("java");
     }
 
 }
