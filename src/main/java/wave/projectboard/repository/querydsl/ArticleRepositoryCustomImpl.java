@@ -1,6 +1,5 @@
 package wave.projectboard.repository.querydsl;
 
-
 import com.querydsl.jpa.JPQLQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

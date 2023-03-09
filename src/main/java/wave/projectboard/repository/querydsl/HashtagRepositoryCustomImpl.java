@@ -1,6 +1,5 @@
 package wave.projectboard.repository.querydsl;
 
-
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 import wave.projectboard.domain.Hashtag;
 import wave.projectboard.domain.QHashtag;
